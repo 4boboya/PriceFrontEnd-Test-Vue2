@@ -1,0 +1,92 @@
+.sub-enter-active {
+    animation: sub-control 0.5s;
+}
+.sub-leave-active {
+    animation: sub-control 0.5s reverse;
+}
+@keyframes sub-control {
+    0% {
+        height: 0px;
+    }
+    100% {
+        height: 175px;
+    }
+}
+
+.gametype-enter-active {
+    animation: gametype-control 0.3s;
+}
+.gametype-leave-active{
+    animation: gametype-control 0.3s reverse;
+}
+@keyframes gametype-control {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 215%;
+    }
+}
+
+.size-enter-active {
+    animation: size-control 0.3s;
+}
+.size-leave-active {
+    animation: size-control 0.3s reverse;
+}
+@keyframes size-control {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 860%;
+    }
+}
+
+.color-enter-active {
+    animation: color-control 0.3s;
+}
+.color-leave-active {
+    animation: color-control 0.3s reverse;
+}
+@keyframes color-control {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 70%;
+    }
+}
+
+.login-enter-active {
+    animation: login-control 0.1s;
+}
+.login-leave-active {
+    animation: login-control 0.1s reverse;
+}
+@keyframes login-control {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+@keyframes hover-dowm {
+    0% {
+      transform: translateY(0px);
+    }
+    20% {
+      transform: translateY(-5px);
+    }
+    40% {
+      transform: translateY(0px);
+    }
+    55% {
+      transform: translateY(-2px);
+    }
+    85% {
+      transform: translateY(0px);
+    }
+  }
