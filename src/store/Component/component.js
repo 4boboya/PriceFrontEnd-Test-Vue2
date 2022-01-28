@@ -31,22 +31,22 @@ export default {
     getters: {},
     actions: {
         SetSingin({ commit }, status) {
-            commit("Singin", status)
+            commit("SetSingin", status)
         },
         SetSinginComponent({ commit }, component) {
-            commit("SinginComponent", component)
+            commit("SetSinginComponent", component)
         },
         SetGameType({ commit }, gameType) {
-            commit("GameType", gameType)
+            commit("SetGameType", gameType)
         },
         SetMemo({ commit }, memo) {
-            commit("Memo", memo)
+            commit("SetMemo", memo)
         },
         SetWidth({ commit }, width) {
-            commit("Width", width)
+            commit("SetWidth", width)
         },
         SetSideBar({ commit }, sideBar) {
-            commit("SideBar", sideBar)
+            commit("SetSideBar", sideBar)
         },
     },
 }

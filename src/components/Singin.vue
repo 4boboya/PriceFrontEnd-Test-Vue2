@@ -14,14 +14,14 @@
 </style>
 
 <script>
-import { mapState, mapMutations } from "vuex";
+import { mapState, mapActions } from "vuex";
 export default {
   computed: {
     ...mapState("Component", ["SinginComponent"]),
   },
 
   methods: {
-    ...mapMutations("Component", ["SetSingin", "SetSinginComponent"]),
+    ...mapActions("Component", ["SetSingin", "SetSinginComponent"]),
     close() {
       this.SetSingin(false);
       this.SetSinginComponent("");

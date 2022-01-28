@@ -36,7 +36,7 @@
 </style>
 
 <script>
-import { mapState, mapMutations } from "vuex";
+import { mapState, mapActions } from "vuex";
 import { Login } from "@/api/user.js";
 export default {
   data() {
@@ -57,7 +57,8 @@ export default {
     this.loginData.finger = this.Finger;
   },
   methods: {
-    ...mapMutations("Component", ["SetSinginComponent"]),
+    ...mapActions("Component", ["SetSinginComponent"]),
+    ...mapActions("User", ["SetUser", "SetWallet"]),
 
     register() {
       this.SetSinginComponent("Register");
@@ -70,6 +71,8 @@ export default {
         console.log(res)
         if (res.code == 10200) {
           console.log('success')
+          this.SetUser(res)
+          this.SetWallet(res.wallet)
         } else {
           console.log('fail')
         }

@@ -67,7 +67,7 @@
 </style>
 
 <script>
-import { mapState, mapMutations } from "vuex";
+import { mapState, mapActions } from "vuex";
 export default {
   computed: {
     ...mapState("Component", ["SideBar", "Width"]),
@@ -80,7 +80,7 @@ export default {
   },
 
   methods: {
-    ...mapMutations("Component", ["SetSideBar", "SetSingin", "SetSinginComponent"]),
+    ...mapActions("Component", ["SetSideBar", "SetSingin", "SetSinginComponent"]),
     login() {
       this.SetSingin(true);
       this.SetSinginComponent("Login");

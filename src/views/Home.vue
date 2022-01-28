@@ -237,7 +237,7 @@
 </style>
 
 <script>
-import { mapState, mapMutations } from "vuex";
+import { mapState, mapActions } from "vuex";
 export default {
   data() {
     return {
@@ -329,7 +329,7 @@ export default {
   },
 
   methods: {
-    ...mapMutations("Component", ["SetGameType", "SetMemo"]),
+    ...mapActions("Component", ["SetGameType", "SetMemo"]),
     changeGameType(gameType) {
       this.show = false
       this.gameType = this.gameTypes[gameType]

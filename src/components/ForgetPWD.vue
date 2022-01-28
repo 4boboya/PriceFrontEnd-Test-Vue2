@@ -37,10 +37,10 @@
 </style>
 
 <script>
-import { mapMutations } from "vuex";
+import { mapActions } from "vuex";
 export default {
   methods: {
-    ...mapMutations("Component", ["SetSinginComponent"]),
+    ...mapActions("Component", ["SetSinginComponent"]),
 
     login() {
       this.SetSinginComponent("Login")

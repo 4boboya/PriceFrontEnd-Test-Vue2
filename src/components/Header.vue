@@ -136,7 +136,7 @@
 </style>
 
 <script>
-import { mapState, mapMutations } from "vuex";
+import { mapState, mapActions } from "vuex";
 export default {
   data() {
     return {
@@ -169,7 +169,7 @@ export default {
   },
 
   methods: {
-    ...mapMutations("Component", ["SetSingin", "SetSinginComponent", "SetSideBar"]),
+    ...mapActions("Component", ["SetSingin", "SetSinginComponent", "SetSideBar"]),
     openSubControl(control) {
       if (control == this.currentControl) {
         this.closeSubControl();

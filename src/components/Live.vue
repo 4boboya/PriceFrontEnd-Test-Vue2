@@ -127,7 +127,7 @@ canvas {
 
 <script>
 import { LiveGame } from "@/api/home.js";
-import { mapState, mapMutations } from "vuex";
+import { mapState, mapActions } from "vuex";
 import Signalr from "@/library/WSLive.js"
 import html2canvas from "html2canvas";
 import ApiGameData from "@/mixin/ApiLiveData.js"
@@ -229,7 +229,7 @@ export default {
   },
 
   methods: {
-    ...mapMutations("Component", ["SetMemo"]),
+    ...mapActions("Component", ["SetMemo"]),
     async getLiveData() {
       this.liveDatas = {}
       await LiveGame({ gameType: this.GameType }).then((res) => {

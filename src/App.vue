@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { mapMutations } from "vuex";
+import { mapActions } from "vuex";
 import Finger from "@/library/Finger.js"
 export default {
   created() {
@@ -20,7 +20,7 @@ export default {
   },
 
   methods: {
-    ...mapMutations("Component", ["SetWidth"]),
+    ...mapActions("Component", ["SetWidth"]),
     setWidth() {
       this.SetWidth(window.innerWidth)
     }
