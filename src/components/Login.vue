@@ -57,8 +57,8 @@ export default {
     this.loginData.finger = this.Finger;
   },
   methods: {
-    ...mapActions("Component", ["SetSinginComponent"]),
-    ...mapActions("User", ["SetUser", "SetWallet"]),
+    ...mapActions("Component", ["SetSinginComponent", "SetSingin"]),
+    ...mapActions("User", ["SetUser", "SetWallet", "SetStatus"]),
 
     register() {
       this.SetSinginComponent("Register");
@@ -68,11 +68,11 @@ export default {
     },
     async login() {
       await Login(this.loginData).then((res) => {
-        console.log(res)
         if (res.code == 10200) {
-          console.log('success')
           this.SetUser(res)
           this.SetWallet(res.wallet)
+          this.SetStatus(true)
+          this.SetSingin(false)
         } else {
           console.log('fail')
         }

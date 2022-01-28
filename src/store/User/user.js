@@ -26,34 +26,34 @@ export default {
             state.Status = status
         },
         SetAccount(state, account) {
-            state.Account = account
+            state.User.Account = account
         },
         SetPassword(state, password) {
-            state.Password = password
+            state.User.Password = password
         },
         SetAddTime(state, addTime) {
-            state.AddTime = addTime
+            state.User.AddTime = addTime
         },
         SetRank(state, rank) {
-            state.Rank = rank
+            state.User.Rank = rank
         },
         SetToken(state, token) {
-            state.Token = token
+            state.User.Token = token
         },
         SetName(state, name) {
-            state.Name = name
+            state.User.Name = name
         },
         SetSite(state, site) {
-            state.Site = site
+            state.User.Site = site
         },
         SetAuthKey(state, authKey) {
-            state.AuthKey = authKey
+            state.User.AuthKey = authKey
         },
         SetPoint(state, point) {
-            state.Point = point
+            state.Wallet.Point = point
         },
         SetSubscriber(state, subscriber) {
-            state.Subscriber = subscriber
+            state.Wallet.Subscriber = subscriber
         },
     },
     getters: {},
@@ -61,15 +61,19 @@ export default {
         SetFinger({ commit }, finger) {
             commit('SetFinger', finger)
         },
+        SetStatus({ commit }, status) {
+            commit('SetStatus', status)
+        },
         SetUser({ commit }, user) {
+            console.log(user)
             commit('SetAccount', user.account)
             commit('SetPassword', user.password)
-            commit('SetAddTime', user.addtime)
+            commit('SetAddTime', user.addTime)
             commit('SetRank', user.rank)
             commit('SetToken', user.token)
-            commit('SetName', user.name)
+            commit('SetName', user.userName)
             commit('SetSite', user.site)
-            commit('SetAuthKey', user.authkey)
+            commit('SetAuthKey', user.authKey)
         },
         SetWallet({ commit }, wallet) {
             commit('SetPoint', wallet.point)

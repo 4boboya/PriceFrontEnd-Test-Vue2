@@ -19,7 +19,8 @@
         <div @click="openSubControl('Customer')">Customer Services</div>
       </div>
       <div class="login-content">
-        <h2 class="login" @click="login()">Login</h2>
+        <h2 v-if="!Status" class="login" @click="login()">Login</h2>
+        <h2 v-else class="user">{{ User.Name }} <icon :icon="['fas', 'angle-down']" /></h2>
       </div>
     </div>
     <transition name="sub">
@@ -130,6 +131,9 @@
 .login {
   cursor: pointer;
 }
+.user {
+  cursor: pointer;
+}
 .sidbar-control {
   padding-right: 20px;
 }
@@ -165,7 +169,8 @@ export default {
   },
 
   computed: {
-    ...mapState("Component", ["SideBar"])
+    ...mapState("Component", ["SideBar"]),
+    ...mapState("User", ["Status", "User"]),
   },
 
   methods: {
