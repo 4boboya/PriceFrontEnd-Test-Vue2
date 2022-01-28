@@ -1,11 +1,11 @@
 <template>
   <div class="footer">
     <div class="type">
-      <div>Help Center</div>
+      <div>Help <span class="pc-show">Center</span></div>
       <div>Feeback</div>
       <div>Promotions</div>
-      <div>Police & Agreement</div>
-      <div>About Us</div>
+      <div>Policy & Agreement</div>
+      <div>About <span class="pc-show">Us</span></div>
     </div>
     <div class="copy">
       <h3>Copy Right © 2021 zbdigital</h3>
@@ -29,6 +29,9 @@
   }
   .type {
     padding: 20px 10px !important;
+  }
+  .pc-show {
+    display: none;
   }
 }
 @include mixin-pc {
@@ -57,3 +60,12 @@
   }
 }
 </style>
+
+<script>
+import { mapState } from "vuex";
+export default {
+  computed: {
+    ...mapState(["Width"]),
+  },
+}
+</script>
