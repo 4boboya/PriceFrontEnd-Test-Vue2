@@ -65,7 +65,7 @@
 import { mapState } from "vuex";
 export default {
   computed: {
-    ...mapState(["Width"]),
+    ...mapState("Component", ["Width"]),
   },
 }
 </script>

@@ -164,7 +164,7 @@ export default {
   },
 
   computed: {
-    ...mapState(["GameType", "Memo"]),
+    ...mapState("Component", ["GameType", "Memo"]),
   },
 
   watch: {
@@ -229,7 +229,7 @@ export default {
   },
 
   methods: {
-    ...mapMutations(["SetMemo"]),
+    ...mapMutations("Component", ["SetMemo"]),
     async getLiveData() {
       this.liveDatas = {}
       await LiveGame({ gameType: this.GameType }).then((res) => {

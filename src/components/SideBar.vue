@@ -70,7 +70,7 @@
 import { mapState, mapMutations } from "vuex";
 export default {
   computed: {
-    ...mapState(["SideBar", "Width"]),
+    ...mapState("Component", ["SideBar", "Width"]),
   },
 
   watch: {
@@ -80,7 +80,7 @@ export default {
   },
 
   methods: {
-    ...mapMutations(["SetSideBar", "SetSingin", "SetSinginComponent"]),
+    ...mapMutations("Component", ["SetSideBar", "SetSingin", "SetSinginComponent"]),
     login() {
       this.SetSingin(true);
       this.SetSinginComponent("Login");

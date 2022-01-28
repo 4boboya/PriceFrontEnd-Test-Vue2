@@ -78,7 +78,7 @@ export default {
     },
   },
   methods: {
-    ...mapMutations(["SetSinginComponent"]),
+    ...mapMutations("Component", ["SetSinginComponent"]),
 
     login() {
       this.SetSinginComponent("Login")

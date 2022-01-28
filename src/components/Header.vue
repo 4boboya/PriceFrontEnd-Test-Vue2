@@ -165,11 +165,11 @@ export default {
   },
 
   computed: {
-    ...mapState(["SideBar"])
+    ...mapState("Component", ["SideBar"])
   },
 
   methods: {
-    ...mapMutations(["SetSingin", "SetSinginComponent", "SetSideBar"]),
+    ...mapMutations("Component", ["SetSingin", "SetSinginComponent", "SetSideBar"]),
     openSubControl(control) {
       if (control == this.currentControl) {
         this.closeSubControl();

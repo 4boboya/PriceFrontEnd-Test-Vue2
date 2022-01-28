@@ -266,7 +266,7 @@ export default {
   },
 
   computed: {
-    ...mapState(["Singin", "Register", "Memo", "Width"]),
+    ...mapState("Component", ["Singin", "Register", "Memo", "Width"]),
   },
 
   watch: {
@@ -329,7 +329,7 @@ export default {
   },
 
   methods: {
-    ...mapMutations(["SetGameType", "SetMemo"]),
+    ...mapMutations("Component", ["SetGameType", "SetMemo"]),
     changeGameType(gameType) {
       this.show = false
       this.gameType = this.gameTypes[gameType]

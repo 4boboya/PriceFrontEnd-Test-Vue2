@@ -8,14 +8,19 @@
 
 <script>
 import { mapMutations } from "vuex";
+import Finger from "@/library/Finger.js"
 export default {
   created() {
     window.addEventListener("resize", this.setWidth)
     this.setWidth()
   },
 
+  mounted() {
+    Finger.Create()
+  },
+
   methods: {
-    ...mapMutations(["SetWidth"]),
+    ...mapMutations("Component", ["SetWidth"]),
     setWidth() {
       this.SetWidth(window.innerWidth)
     }

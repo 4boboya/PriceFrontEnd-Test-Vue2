@@ -17,11 +17,11 @@
 import { mapState, mapMutations } from "vuex";
 export default {
   computed: {
-    ...mapState(["SinginComponent"]),
+    ...mapState("Component", ["SinginComponent"]),
   },
 
   methods: {
-    ...mapMutations(["SetSingin", "SetSinginComponent"]),
+    ...mapMutations("Component", ["SetSingin", "SetSinginComponent"]),
     close() {
       this.SetSingin(false);
       this.SetSinginComponent("");
